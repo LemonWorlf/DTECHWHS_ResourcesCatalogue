@@ -1,0 +1,419 @@
+/* =========================================
+   DTECH WHS RESOURCE CATALOGUE
+   Stage 2: CSS styling
+   Official palette:
+   Navy Blue   #000080
+   Royal Blue  #4169E1
+   Dark Orange #FF8C00
+   Golden      #FFB000
+   White       #FFFFFF
+   ========================================= */
+ 
+/* 1. RESET: makes sizing and spacing more predictable */
+* {
+    box-sizing: border-box;
+}
+ 
+html {
+    scroll-behavior: smooth;
+}
+ 
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17213b;
+    background: #FFFFFF;
+    line-height: 1.6;
+}
+ 
+a {
+    color: inherit;
+}
+ 
+/* 2. REUSABLE PAGE WIDTH */
+.section-wrap {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+ 
+/* 3. HEADER AND BRAND */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px max(20px, calc((100% - 1120px) / 2));
+    background: #FFFFFF;
+    border-bottom: 1px solid #e6e9f2;
+}
+ 
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+ 
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    color: #FFFFFF;
+    background: #000080;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+ 
+.brand-kicker {
+    margin: 0;
+    color: #4169E1;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+ 
+.brand h1 {
+    margin: 0;
+    color: #000080;
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    line-height: 1.25;
+}
+ 
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+ 
+.main-nav a {
+    padding: 9px 13px;
+    border-radius: 8px;
+    color: #000080;
+    text-decoration: none;
+    font-weight: 700;
+}
+ 
+.main-nav a:hover,
+.main-nav a:focus-visible {
+    color: #FFFFFF;
+    background: #4169E1;
+}
+ 
+/* 4. HERO / INTRODUCTION */
+.hero {
+    padding: clamp(56px, 9vw, 100px) 20px;
+    text-align: center;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #000080, #4169E1);
+}
+ 
+.eyebrow {
+    margin: 0 0 10px;
+    color: #FFFFFF;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.eyebrow2 {
+    margin: 0 0 10px;
+    color: #FFB000;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.hero h2 {
+    max-width: 800px;
+    margin: 0 auto 16px;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.1;
+}
+ 
+.hero-copy {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    color: #f2f4ff;
+    font-size: 1.08rem;
+}
+ 
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 160ms ease, background-color 160ms ease;
+}
+ 
+.button:hover {
+    transform: translateY(-2px);
+}
+ 
+.button-light {
+    color: #000080;
+    background: #FFB000;
+}
+ 
+.button-light:hover,
+.button-light:focus-visible {
+    background: #FF8C00;
+}
+ 
+/* 5. CATALOGUE SECTION */
+.catalogue-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+ 
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 26px;
+}
+ 
+.section-heading h2,
+.about-inner h2 {
+    margin: 0;
+    color: #000080;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    line-height: 1.2;
+}
+ 
+.section-heading .eyebrow,
+.about-inner .eyebrow {
+    color: #FF8C00;
+}
+ 
+.section-description {
+    max-width: 430px;
+    margin: 0;
+    color: #59627a;
+}
+ 
+/* 6. SEARCH AND FILTER CONTROLS
+   These are styled now; they need JavaScript to filter cards. */
+.catalogue-tools {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
+    gap: 12px;
+    margin-bottom: 28px;
+}
+ 
+.catalogue-tools input,
+.catalogue-tools select {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid #cbd2e5;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #17213b;
+    font: inherit;
+}
+ 
+.catalogue-tools input:focus,
+.catalogue-tools select:focus {
+    outline: 3px solid rgba(65, 105, 225, 0.22);
+    border-color: #4169E1;
+}
+ 
+/* 7. RESOURCE CARDS */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+ 
+.resource-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 245px;
+    padding: 24px;
+    border: 1px solid #e1e6f2;
+    border-top: 5px solid #FF8C00;
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-shadow: 0 8px 24px rgba(0, 0, 128, 0.07);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+ 
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 128, 0.12);
+}
+ 
+.card-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+ 
+.category-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 999px;
+    color: #000080;
+    background: #eef1ff;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+ 
+.resource-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    color: #000080;
+    background: #fff0d8;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+ 
+.resource-card h3 {
+    margin: 18px 0 8px;
+    color: #000080;
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+ 
+.resource-card p {
+    margin: 0 0 20px;
+    color: #59627a;
+}
+ 
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+    margin-top: auto;
+    color: #4169E1;
+    font-weight: 800;
+    text-decoration: none;
+}
+ 
+.card-link:hover,
+.card-link:focus-visible {
+    color: #000080;
+    text-decoration: underline;
+}
+ 
+.prototype-note {
+    margin: 24px 0 0;
+    color: #68718a;
+    font-size: 0.9rem;
+}
+ 
+/* 8. ABOUT AND FOOTER */
+.about-section {
+    padding: 56px 0;
+    background: #f4f6ff;
+    border-top: 1px solid #e6e9f2;
+}
+ 
+.about-inner {
+    max-width: 760px;
+}
+ 
+.about-inner > p:last-child {
+    color: #59627a;
+}
+ 
+.site-footer {
+    padding: 22px 20px;
+    color: #FFFFFF;
+    background: #000080;
+    text-align: center;
+    font-size: 0.9rem;
+}
+ 
+.site-footer p {
+    margin: 0;
+}
+ 
+/* 9. ACCESSIBILITY: visually hide labels but keep them available to screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+ 
+/* 10. RESPONSIVE LAYOUT: tablet and smaller screens */
+@media (max-width: 800px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 20px;
+    }
+ 
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+ 
+    .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+ 
+/* 11. RESPONSIVE LAYOUT: phones */
+@media (max-width: 560px) {
+    .main-nav {
+        width: 100%;
+    }
+ 
+    .main-nav a {
+        padding: 8px 10px;
+    }
+ 
+    .catalogue-tools {
+        grid-template-columns: 1fr;
+    }
+ 
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .catalogue-section {
+        padding-top: 44px;
+        padding-bottom: 44px;
+    }
+ 
+    .resource-card {
+        min-height: 0;
+    }
+}
+ 
+/* 12. RESPECT REDUCED-MOTION SETTINGS */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+ 
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

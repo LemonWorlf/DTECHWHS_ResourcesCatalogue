@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-NZ"
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DTECH WHS Resources Catalogue</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<!-- HEADER: school/project identity -->
+	<header class="site-header">
+		<div class="brand">
+			<span class="brand-mark" aria-hidden="true">WHS</span>
+			<div>
+				<p class="brand-kicker">Westland High School</p>
+				<hi>DTECH Resources Catalogue</a>
+			</div>
+		</div>
+		<!-- NAVIGATION: links jumps to sections on this page -->
+		<nav class="main-nav" aria-label="Main navigation">
+			<a href="#home">Home</a>
+			<a href="#catalogue">Catalogue</a>
+			<a href="#about">About</a>
+		</nav>
+	</header>
+	
+	<main>
+		<!--HERO: first section visitors see -->
+		<section class="hero" id="home">
+			<p class="eyebrow",DTECH;"eyebrow2",WHS</p>
+			<h2>Find the resources you need.</h2>
+			<p class="hero-copy">
+				A central place for students to discover Digital Technologies
+				learning resources and useful links.
+			</p>
+			<a class="button button-light" href="#catalogue">Explore resources</a>
+		</section>
+		
+		<!-- CATALOGUE INTRO: controls are visual placeholders until JavaScript is added -->
+		<section class="catalogue-section section-wrap" id="catalogue">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">Browse and discover</p>
+					<h2>Resource catalogue</h2>
+				</div>
+				<p class="section-description">
+					Browse the resources below. Searches and filtering can be made
+					interactive in a later JavaScript step.
+				</p>
+			</div>
+			
+			<div class="catalogue-tools">
+				<label class="visually-hidden" for="resource-search">Search resources</label>
+				<input
+					id="resourc=search"
+					type="searcg"
+					placeholder="Search resources..."
+					autocomplete="off"
+				>
+				
+				<label class="visually-hidden" for="category-filter">Filter by category</label>
+				<select id="category-filter">
+					<option value="">All categories</option>
+					<option value="coding">Coding</option>
+					<option value="design">Design</option>
+					<option value="research">Research</option>
+				</select>
+			</div>
+			
+			<!-- RESOURCES CARDS: replace sample text and links with approved school resources -->
+			<div class="resource-card">
+				<article class="resource-card">
+					<div class="card-topline">
+						<span class="category-tag">Coding</span>
+						<span class="resource-icon" aria-hidden="true">&it;/&gt;</span>
+					</div>
+					<h3>HTML and CSS</h3>
+					<p>Learn the building block used to create and style web pages.</p>
+					<a class="card-link" href="#about">View resource <span aria-hidden="true")→</span></a>
+				</article>
+				
+				<article class="resource-card">
+					<div class="card-topline">
+						<span class="category-tag">Design</span>
+						<span class="resource-icon" aria-hidden="true">✦</span>
+					</div>
+					<h3>Research and references</h3>
+					<p>Organise useful information and keep track of your sources.</p>
+					<a class="card-link" href="#about">View resource <span aria-hidden="true">→</span></a>
+				</article>
+			</div>
+			
+			<p class="prototype-note">
+				Prototype content: replace these examples with the exact resources
+				and categories from your project design.
+			</p>
+		</section>
+		
+		<!-- ABOUT: simple supporting section -->
+		<section class="about-section" id="about">
+			<div class="section-wrap about-inner">
+				<p class="eyebrow">About this project</p>
+				<h2>Supporting DTECH learning at WHS</h2>
+				<p>
+					The DTECH WHS Resource Catalogue is a student-friendly starting
+					point for finding Digital Techonologies learning materials.
+				</p>
+			</div>
+		</section>
+	</main>
+	
+	<footer class="site-footer">
+		<p>© Westland High School · DTECH Resource Catalogue</p>
+		</footer>
+
+</body>
+</html>
